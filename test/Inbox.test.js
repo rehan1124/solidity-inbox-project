@@ -39,7 +39,7 @@ describe("When contract `Inbox` is deployed", () => {
     assert.equal(message, DEFAULT_MESSAGE);
   });
 
-  it("Shold be able to set new message.", async () => {
+  it("Should be able to set new message.", async () => {
     await inbox.methods.setMessage("Bye bye !!!").send({ from: accounts[0] });
     const message = await inbox.methods.message().call();
     assert.equal(message, "Bye bye !!!");
